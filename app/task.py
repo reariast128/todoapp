@@ -16,7 +16,11 @@ class Task:
         self._deadline = deadline
 
     def __str__(self) -> str:
-        return f"{self._title}, created at {self._created_time.strftime('%c')}"
+        return f"""
+{self._title}, created at {self._created_time.strftime('%c')}, edited at {self._modified_time.strftime('%c')}.
+Content:
+
+{self._content}"""
 
     def change_content(self, new_content: str) -> None:
         self._content = new_content
