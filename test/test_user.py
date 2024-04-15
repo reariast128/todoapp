@@ -13,6 +13,9 @@ class TestUser(unittest.TestCase):
         self.assertEquals(task, user.tasks[-1])
 
     def test_add_task_passing_task_arguments(self) -> None:
+
+        # This test is failing for some reason.
+
         user: User = User("Testing user")
         expected_date = datetime.now()
         expected_task: Task = Task("Test title", "Test content", expected_date)
